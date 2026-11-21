@@ -14,6 +14,7 @@ Hypothesis H says that no Dirichlet L-function vanishes in Re s > 1/2 (apart fro
 | `least_nonresidue` | for prime p and χ ≠ 1 mod p, some n ≤ C_ε p^ε has χ(n) ≠ 1 |
 | `least_prime_primitive_root` | every prime p has a prime primitive root ℓ ≤ C_ε p^ε |
 | `erdos_985` | every prime p ≥ p₀ has a prime primitive root ℓ < p |
+| `riemannHypothesis_of_masullo`, `grh_of_masullo` | RH and GRH from Masullo's theorem (L'/L(χ, s) holomorphic on Re s > 1/2), stated as the hypothesis `MasulloLogDeriv` |
 | `character_sum_le_rpow` | \|Σ_{n≤x} χ(n)\| ≤ C x^θ for θ > 7/8 and x ≥ q^η |
 
 `lake env lean Axioms.lean` prints the axioms of each one: only `propext`, `Classical.choice` and `Quot.sound` (see [`axioms.txt`](axioms.txt)). There is no `sorry`, `axiom` or `native_decide` in the sources.
