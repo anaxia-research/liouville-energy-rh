@@ -5,3 +5,5 @@
 'LiouvilleEnergyRH.least_prime_primitive_root' depends on axioms: [propext, Classical.choice, Quot.sound]
 'LiouvilleEnergyRH.erdos_985' depends on axioms: [propext, Classical.choice, Quot.sound]
 'LiouvilleEnergyRH.character_sum_le_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.riemannHypothesis_of_masullo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.grh_of_masullo' depends on axioms: [propext, Classical.choice, Quot.sound]

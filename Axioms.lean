@@ -7,3 +7,5 @@ import LiouvilleEnergyRH
 #print axioms LiouvilleEnergyRH.least_prime_primitive_root
 #print axioms LiouvilleEnergyRH.erdos_985
 #print axioms LiouvilleEnergyRH.character_sum_le_rpow
+#print axioms LiouvilleEnergyRH.riemannHypothesis_of_masullo
+#print axioms LiouvilleEnergyRH.grh_of_masullo
