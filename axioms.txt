@@ -7,3 +7,8 @@
 'LiouvilleEnergyRH.character_sum_le_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
 'LiouvilleEnergyRH.riemannHypothesis_of_masullo' depends on axioms: [propext, Classical.choice, Quot.sound]
 'LiouvilleEnergyRH.grh_of_masullo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.lindelof_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.character_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.prime_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.logDeriv_one_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.euler_kronecker_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
