@@ -1,0 +1,7 @@
+'LiouvilleEnergyRH.riemannHypothesis_of_H' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.grh_critLine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.polya_vinogradov' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.least_nonresidue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.least_prime_primitive_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.erdos_985' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.character_sum_le_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
