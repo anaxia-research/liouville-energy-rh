@@ -16,6 +16,11 @@ Hypothesis H says that no Dirichlet L-function vanishes in Re s > 1/2 (apart fro
 | `erdos_985` | every prime p ≥ p₀ has a prime primitive root ℓ < p |
 | `riemannHypothesis_of_masullo`, `grh_of_masullo` | RH and GRH from Masullo's theorem (L'/L(χ, s) holomorphic on Re s > 1/2), stated as the hypothesis `MasulloLogDeriv` |
 | `character_sum_le_rpow` | \|Σ_{n≤x} χ(n)\| ≤ C x^θ for θ > 7/8 and x ≥ q^η |
+| `lindelof_bound` | \|L(s, χ)\| + \|L(s, χ)\|⁻¹ ≤ C (q(3 + \|t\|))^w for Re s ≥ 7/8 + w |
+| `character_sum_bound` | \|Σ_{n≤x} χ(n)\| ≤ C q^w x^{7/8+w} |
+| `prime_sum_bound` | \|Σ_{p≤x} χ(p) log p\| ≤ C x^{19/20} log(q + 2) |
+| `logDeriv_one_bound` | \|L'/L(1, χ)\| ≤ C log log q |
+| `euler_kronecker_bound` | for prime q, Σ_{χ≠1} L'/L(1, χ) lies in [−C log q log log q, C log q] |
 
 `lake env lean Axioms.lean` prints the axioms of each one: only `propext`, `Classical.choice` and `Quot.sound` (see [`axioms.txt`](axioms.txt)). There is no `sorry`, `axiom` or `native_decide` in the sources.
 
