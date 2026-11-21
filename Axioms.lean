@@ -1,0 +1,9 @@
+import LiouvilleEnergyRH
+
+#print axioms LiouvilleEnergyRH.riemannHypothesis_of_H
+#print axioms LiouvilleEnergyRH.grh_critLine
+#print axioms LiouvilleEnergyRH.polya_vinogradov
+#print axioms LiouvilleEnergyRH.least_nonresidue
+#print axioms LiouvilleEnergyRH.least_prime_primitive_root
+#print axioms LiouvilleEnergyRH.erdos_985
+#print axioms LiouvilleEnergyRH.character_sum_le_rpow
