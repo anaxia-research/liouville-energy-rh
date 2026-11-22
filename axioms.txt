@@ -12,3 +12,7 @@
 'LiouvilleEnergyRH.prime_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 'LiouvilleEnergyRH.logDeriv_one_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 'LiouvilleEnergyRH.euler_kronecker_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.MasulloRoute.hypothesisH_of_masullo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.lindelof_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.character_sum_bound_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LiouvilleEnergyRH.vinogradov_character_sum' depends on axioms: [propext, Classical.choice, Quot.sound]

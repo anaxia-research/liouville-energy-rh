@@ -4,3 +4,4 @@ import LiouvilleEnergyRH.Corollaries
 import LiouvilleEnergyRH.NonResidue
 import LiouvilleEnergyRH.MasulloRoute
 import LiouvilleEnergyRH.MoreCorollaries
+import LiouvilleEnergyRH.VinogradovHalf

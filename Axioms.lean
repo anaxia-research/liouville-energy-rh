@@ -14,3 +14,7 @@ import LiouvilleEnergyRH
 #print axioms LiouvilleEnergyRH.prime_sum_bound
 #print axioms LiouvilleEnergyRH.logDeriv_one_bound
 #print axioms LiouvilleEnergyRH.euler_kronecker_bound
+#print axioms LiouvilleEnergyRH.MasulloRoute.hypothesisH_of_masullo
+#print axioms LiouvilleEnergyRH.lindelof_half
+#print axioms LiouvilleEnergyRH.character_sum_bound_half
+#print axioms LiouvilleEnergyRH.vinogradov_character_sum
