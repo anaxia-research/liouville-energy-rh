@@ -6,3 +6,6 @@
 'UpperTheory.Comparison₂.core_gm' depends on axioms: [propext, Classical.choice, Quot.sound]
 'UpperTheory.Comparison₂.sigA_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Deduction.ch_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.hypothesisH_of_logDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.riemannHypothesis_of_logDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.grh_of_logDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]

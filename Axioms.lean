@@ -7,3 +7,6 @@ import ReadableRH
 #print axioms UpperTheory.Comparison₂.core_gm
 #print axioms UpperTheory.Comparison₂.sigA_le
 #print axioms Deduction.ch_core
+#print axioms ReadableRH.hypothesisH_of_logDeriv
+#print axioms ReadableRH.riemannHypothesis_of_logDeriv
+#print axioms ReadableRH.grh_of_logDeriv

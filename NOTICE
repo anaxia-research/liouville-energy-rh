@@ -7,8 +7,9 @@ ReadableRH/Window/, ReadableRH/Host/
   Taken from L. Alpöge's Lean project (alpo.ge, November 2026). Only the
   import lines and module names are changed; the proofs are his work.
 
-ReadableRH/FunctionalEquation.lean
-  The functional-equation step follows the same project.
+ReadableRH/FunctionalEquation.lean, ReadableRH/LogDeriv.lean
+  The functional-equation step and the order-of-vanishing lemma follow the
+  same project.
 
 corollaries/Vinogradov.lean, corollaries/Vinogradov/  (Apache License 2.0,
   corollaries/LICENSE-APACHE)
