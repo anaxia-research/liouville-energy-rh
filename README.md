@@ -148,7 +148,7 @@ Lean v4.34.1 and Mathlib v4.34.1, pinned in `lean-toolchain` and `lake-manifest.
 ## 🙏 Sources and credit
 
 - **Hypothesis H and the closure step.** The statement of H and the proofs of `rh_of_right`, `gammaFactor_ne_zero`, `grh_critLine` and `riemannHypothesis_of_H` in `LiouvilleEnergyRH/Closure.lean` are taken from L. Alpöge's Lean project and are his work. A. Masullo's theorem enters only as the stated hypothesis `MasulloLogDeriv`.
-- **`Vinogradov/`.** From D. Bhattacharjee's Apache-2.0 repository [creelie/breakthrough-problems-3](https://github.com/creelie/breakthrough-problems-3). The files that used a zero-free half-plane directly take it as a hypothesis here.
+- **`Vinogradov/`.** From D. Bhattacharjee's Apache-2.0 repository [anaxia-research/Breakthrough-problems-3](https://github.com/anaxia-research/Breakthrough-problems-3). The files that used a zero-free half-plane directly take it as a hypothesis here.
 - **`OAI/NumberTheory/DirichletL/LogarithmicControl.lean`.** OpenAI, from [openai/math](https://github.com/openai/math), Apache License 2.0 (Borel–Carathéodory and three-circles lemmas). The half-plane Re s > 7/8 announced by OpenAI is not used.
 - **`PrimeNumberTheoremAnd/`.** The Selberg sieve files of [PrimeNumberTheoremAnd](https://github.com/AlexKontorovich/PrimeNumberTheoremAnd) by Arend Mellendijk, Apache License 2.0.
 
