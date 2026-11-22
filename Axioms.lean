@@ -1,20 +1,9 @@
-import LiouvilleEnergyRH
-
-#print axioms LiouvilleEnergyRH.riemannHypothesis_of_H
-#print axioms LiouvilleEnergyRH.grh_critLine
-#print axioms LiouvilleEnergyRH.polya_vinogradov
-#print axioms LiouvilleEnergyRH.least_nonresidue
-#print axioms LiouvilleEnergyRH.least_prime_primitive_root
-#print axioms LiouvilleEnergyRH.erdos_985
-#print axioms LiouvilleEnergyRH.character_sum_le_rpow
-#print axioms LiouvilleEnergyRH.riemannHypothesis_of_masullo
-#print axioms LiouvilleEnergyRH.grh_of_masullo
-#print axioms LiouvilleEnergyRH.lindelof_bound
-#print axioms LiouvilleEnergyRH.character_sum_bound
-#print axioms LiouvilleEnergyRH.prime_sum_bound
-#print axioms LiouvilleEnergyRH.logDeriv_one_bound
-#print axioms LiouvilleEnergyRH.euler_kronecker_bound
-#print axioms LiouvilleEnergyRH.MasulloRoute.hypothesisH_of_masullo
-#print axioms LiouvilleEnergyRH.lindelof_half
-#print axioms LiouvilleEnergyRH.character_sum_bound_half
-#print axioms LiouvilleEnergyRH.vinogradov_character_sum
+import ReadableRH
+#print axioms ReadableRH.windowed_energy_principle
+#print axioms ReadableRH.riemannHypothesis_of_windowBound
+#print axioms ReadableRH.grh_of_windowBound
+#print axioms ReadableRH.rh_of_H
+#print axioms ReadableRH.critLine
+#print axioms UpperTheory.Comparison₂.core_gm
+#print axioms UpperTheory.Comparison₂.sigA_le
+#print axioms Deduction.ch_core

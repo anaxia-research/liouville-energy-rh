@@ -1,20 +1,25 @@
-import LiouvilleEnergyRH.Hypothesis
+import Mathlib
 
 /-!
-# From Hypothesis H to RH and GRH
+# From the zero-free half-plane to the critical line
 
-Hypothesis H gives Mathlib's `RiemannHypothesis` and puts every zero of a primitive Dirichlet
-`L`-function in the critical strip on the line `Re s = 1/2`. A zero to the left of the line is
-reflected to `1 - s` by the functional equation of the completed `L`-function of `χ̄`, and the
-gamma factor has no zeros in `Re s > 0`.
+`HypothesisH` says that no Dirichlet `L`-function vanishes in `Re s > 1/2`
+(apart from the pole of `ζ` at `s = 1`). This file proves, using only the
+functional equation and the fact that the gamma factors have no zeros, that
+`HypothesisH` gives Mathlib's `RiemannHypothesis` and puts every zero of a
+primitive Dirichlet `L`-function in the critical strip on the line `Re s = 1/2`.
 
-The proofs in this file are taken from L. Alpöge's Lean project (alpo.ge, November 2026) and
-are his work.
+The Lean proofs here are adapted from L. Alpöge's Lean project (alpo.ge, November 2026).
 -/
 
-namespace LiouvilleEnergyRH
-
 open Complex DirichletCharacter
+
+namespace ReadableRH
+
+/-- **Hypothesis H**: the zero-free half-plane for every Dirichlet `L`-function. -/
+def HypothesisH : Prop :=
+  ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ), 1 / 2 < s.re → (χ ≠ 1 ∨ s ≠ 1) →
+    DirichletCharacter.LFunction χ s ≠ 0
 
 theorem rh_of_right (hz : ∀ s : ℂ, 1 / 2 < s.re → s ≠ 1 → riemannZeta s ≠ 0) : RiemannHypothesis := by
   unfold RiemannHypothesis
@@ -79,7 +84,7 @@ theorem gammaFactor_ne_zero {N : ℕ} (χ : DirichletCharacter ℂ N) {s : ℂ} 
   · rw [h.gammaFactor_def]; exact Gammaℝ_ne_zero_of_re_pos hs
   · rw [h.gammaFactor_def]; exact Gammaℝ_ne_zero_of_re_pos (by rw [add_re, one_re]; linarith)
 
-theorem grh_critLine (h : HypothesisH) (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (hχ : χ.IsPrimitive) (s : ℂ)
+theorem critLine (h : HypothesisH) (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (hχ : χ.IsPrimitive) (s : ℂ)
     (h0 : 0 < s.re) (h1 : s.re < 1) (hz : LFunction χ s = 0) : s.re = 1 / 2 := by
   have hs0 : s ≠ 0 := fun e => by simp [e] at h0
   have hs1 : s ≠ 1 := fun e => by simp [e] at h1
@@ -97,9 +102,9 @@ theorem grh_critLine (h : HypothesisH) (N : ℕ) [NeZero N] (χ : DirichletChara
     rw [LFunction_eq_completed_div_gammaFactor χ⁻¹ (1 - s) (Or.inl h2), hfe, zero_div]
   · exact h N χ s hgt (Or.inr hs1) hz
 
-theorem riemannHypothesis_of_H (h : HypothesisH) : RiemannHypothesis :=
+theorem rh_of_H (h : HypothesisH) : RiemannHypothesis :=
   rh_of_right fun s hs hs1 => by
     have := h 1 (1 : DirichletCharacter ℂ 1) s hs (Or.inr hs1)
     rwa [LFunction_modOne_eq] at this
 
-end LiouvilleEnergyRH
+end ReadableRH

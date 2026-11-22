@@ -1,31 +1,18 @@
-name = "VinogradovPrimitiveRoot"
-defaultTargets = ["LiouvilleEnergyRH"]
+name = "readableRH"
+defaultTargets = ["ReadableRH"]
+moreLeanArgs = ["--tstack=400000"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+maxSynthPendingDepth = 3
+maxHeartbeats = 4000000
+synthInstance.maxHeartbeats = 400000
 
 [[require]]
 name = "mathlib"
 git = "https://github.com/leanprover-community/mathlib4"
-rev = "v4.34.1"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"
 
 [[lean_lib]]
-name = "OAI"
-roots = ["OAI.NumberTheory.DirichletL.LogarithmicControl"]
-globs = ["OAI.+"]
-leanOptions = { autoImplicit = false }
-
-[[lean_lib]]
-name = "PrimeNumberTheoremAnd"
-roots = []
-globs = ["PrimeNumberTheoremAnd.+"]
-leanOptions = { autoImplicit = false, relaxedAutoImplicit = false }
-
-[[lean_lib]]
-name = "Vinogradov"
-roots = ["Vinogradov"]
-globs = ["Vinogradov", "Vinogradov.+"]
-leanOptions = { autoImplicit = false }
-
-[[lean_lib]]
-name = "LiouvilleEnergyRH"
-roots = ["LiouvilleEnergyRH"]
-globs = ["LiouvilleEnergyRH", "LiouvilleEnergyRH.+"]
-leanOptions = { autoImplicit = false }
+name = "ReadableRH"
