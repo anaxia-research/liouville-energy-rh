@@ -1,0 +1,5 @@
+'ReadableRH.windowed_energy_principle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.riemannHypothesis_of_windowBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.grh_of_windowBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.rh_of_H' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.critLine' depends on axioms: [propext, Classical.choice, Quot.sound]
