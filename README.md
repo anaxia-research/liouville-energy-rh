@@ -1,30 +1,58 @@
-# liouville-energy-rh
+# Proof of the Riemann and Generalized Riemann Hypotheses
 
-Lean 4 formalization accompanying the paper
+**DOI:** assigned by Zenodo at release v5.0.0 (see below)
 
-> **Proof of the Riemann and Generalized Riemann Hypotheses**
-> Deep Bhattacharjee and Ushashi Bhattacharya, 2026.
-> Preprints.org 202606.1350, version 5.
+**Deep Bhattacharjee**\* and **Ushashi Bhattacharya**
 
-**Corresponding author:** Deep Bhattacharjee
-(itsdeep@live.com, d.bhattacharjee@erl-forschung.de;
-ORCID [0000-0003-0466-750X](https://orcid.org/0000-0003-0466-750X)).
-Code contact: egspl@proton.me, GitHub [creelie](https://github.com/creelie).
+**Deep Bhattacharjee.** Formerly, Electro-Gravitational Space Propulsion
+Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India; Formerly, University of
+Calcutta (Heramba Chandra College), 23/49 Gariahat Road, Golpark, Kolkata
+700029, West Bengal, India.
+Email: d.bhattacharjee@erl-forschung.de, itsdeep@live.com, egspl@proton.me.
+ORCID [0000-0003-0466-750X](https://orcid.org/0000-0003-0466-750X).
+
+**Ushashi Bhattacharya.** Formerly, National Taiwan University, Taipei 106319,
+Taiwan. Email: rai.bhattacharya.in@gmail.com.
+ORCID [0009-0002-2254-3914](https://orcid.org/0009-0002-2254-3914).
+
+\*Corresponding author and head of the project. Code and GitHub contact:
+egspl@proton.me, GitHub [creelie](https://github.com/creelie).
+
+Preprints.org 202606.1350, version 5 (version 4:
+[doi.org/10.20944/preprints202606.1350.v4](https://doi.org/10.20944/preprints202606.1350.v4)).
 
 ---
 
-## Overview
+## Abstract
 
-The paper shows that the Riemann hypothesis (RH) and its generalization to
-Dirichlet L-functions (GRH) are each equivalent to one energy bound for the
-Liouville function on a sparse sequence of windows. It then proves both from a
-single cited window theorem.
+We prove the Riemann hypothesis and the generalized Riemann hypothesis for
+Dirichlet L-functions using the window energy of the Liouville function, whose
+growth exponent is twice the largest real part of a zeta zero. Each hypothesis
+is equivalent to one energy bound on a sparse sequence of windows, and that
+bound follows from a window theorem drawn from the Galois representations of CM
+fields. The Lindelöf hypothesis, the sharp Pólya–Vinogradov inequality,
+Vinogradov's conjectures and cases of Chowla's conjecture follow.
 
-This repository checks every step of that deduction in Lean 4. It is written to
-be read beside the paper. Every theorem listed below builds with no `sorry` and
-depends only on the three standard axioms `propext`, `Classical.choice` and
-`Quot.sound`. The output of `#print axioms` is recorded in
-[`axioms.txt`](axioms.txt) and [`corollaries/axioms.txt`](corollaries/axioms.txt).
+**Keywords:** Riemann hypothesis; generalized Riemann hypothesis; Riemann zeta
+function; Dirichlet L-functions.
+
+**MSC 2020:** 11M26; 11N37, 11M06.
+
+## Contents of this record
+
+| Path | Content |
+|---|---|
+| [`Paper/Proof-of-the-Riemann-and-Generalized-Riemann-Hypotheses.pdf`](Paper/Proof-of-the-Riemann-and-Generalized-Riemann-Hypotheses.pdf) | The paper, 183 A4 pages |
+| [`ReadableRH/`](ReadableRH) | Lean 4 formalization of the deduction of RH and GRH |
+| [`corollaries/`](corollaries) | Lean 4 formalization of the corollaries |
+| [`axioms.txt`](axioms.txt), [`corollaries/axioms.txt`](corollaries/axioms.txt) | Output of `#print axioms` |
+| [`.zenodo.json`](.zenodo.json) | Zenodo metadata |
+
+## The Lean formalization
+
+Every step of the deduction is checked in Lean 4, to be read beside the paper.
+Every theorem listed below builds with no `sorry` and depends only on the three
+standard axioms `propext`, `Classical.choice` and `Quot.sound`.
 
 ## Main results
 
@@ -113,6 +141,7 @@ hypothesis unless stated otherwise.
 ## Repository layout
 
 ```
+Paper/                  the paper (PDF)
 ReadableRH/
   Window/               windowed energy principle (Landau-type theorem)
   Host/                 host decomposition
@@ -133,8 +162,10 @@ corollaries/            consequences of the zero-free half-plane (Lean 4.34.1)
   author       = {Bhattacharjee, Deep and Bhattacharya, Ushashi},
   title        = {Proof of the Riemann and Generalized Riemann Hypotheses},
   year         = {2026},
+  publisher    = {Zenodo},
+  version      = {5.0.0},
   howpublished = {Preprints.org, 202606.1350, version 5},
-  note         = {Lean formalization: https://github.com/anaxia-research/liouville-energy-rh}
+  url          = {https://github.com/anaxia-research/liouville-energy-rh}
 }
 ```
 
@@ -142,6 +173,6 @@ corollaries/            consequences of the zero-free half-plane (Lean 4.34.1)
 
 `ReadableRH/Window/` and `ReadableRH/Host/` are taken from L. Alpöge's Lean
 project, with only the import lines changed. See [`NOTICE`](NOTICE) for these
-and the other third-party files. Our own files are under the MIT licence
-([`LICENSE`](LICENSE)). The Vinogradov files are under Apache 2.0
+and the other third-party files. The paper in `Paper/` is under CC BY 4.0, as on Preprints.org. Our own Lean
+files are under the MIT licence ([`LICENSE`](LICENSE)). The Vinogradov files are under Apache 2.0
 ([`corollaries/LICENSE-APACHE`](corollaries/LICENSE-APACHE)).
