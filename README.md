@@ -1,6 +1,8 @@
 # Proof of the Riemann and Generalized Riemann Hypotheses
 
-**DOI:** assigned by Zenodo at release v5.0.0 (see below)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24462588.svg)](https://doi.org/10.5281/zenodo.24462588)
+
+**DOI:** [10.5281/zenodo.24462588](https://doi.org/10.5281/zenodo.24462588) (the paper on Zenodo)
 
 **Deep Bhattacharjee**\* and **Ushashi Bhattacharya**
 
@@ -163,7 +165,8 @@ corollaries/            consequences of the zero-free half-plane (Lean 4.34.1)
   title        = {Proof of the Riemann and Generalized Riemann Hypotheses},
   year         = {2026},
   publisher    = {Zenodo},
-  version      = {5.0.0},
+  version      = {5},
+  doi          = {10.5281/zenodo.24462588},
   howpublished = {Preprints.org, 202606.1350, version 5},
   url          = {https://github.com/anaxia-research/liouville-energy-rh}
 }
