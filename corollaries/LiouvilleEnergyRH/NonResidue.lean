@@ -15,10 +15,12 @@ namespace LiouvilleEnergyRH
 
 open Complex
 
-theorem least_nonresidue (h : HypothesisH) {ε : ℝ} (hε : 0 < ε) :
+/-- The least non-residue bound from the library's hypothesis `ZeroFree` (the zero-free
+half-plane `re s > 7/8` for nonprincipal characters). -/
+theorem least_nonresidue_of_zeroFree (hZ : Vinogradov.Main.ZeroFree) {ε : ℝ} (hε : 0 < ε) :
     ∃ C : ℝ, 0 < C ∧ ∀ (p : ℕ) [Fact p.Prime] (χ : DirichletCharacter ℂ p), χ ≠ 1 →
       ∃ n : ℕ, 1 ≤ n ∧ (n : ℝ) ≤ C * (p : ℝ) ^ ε ∧ χ n ≠ 1 := by
-  have : Fact Vinogradov.Main.ZeroFree := ⟨zeroFree_of_H h⟩
+  have : Fact Vinogradov.Main.ZeroFree := ⟨hZ⟩
   set w : ℝ := min (ε / 32) (1 / 32) with hw_def
   have hw : 0 < w := lt_min (by linarith) (by norm_num)
   have hwε : w ≤ ε / 32 := min_le_left _ _
@@ -70,5 +72,10 @@ theorem least_nonresidue (h : HypothesisH) {ε : ℝ} (hε : 0 < ε) :
     Real.rpow_le_rpow_of_exponent_le hp1 (by linarith)
   have hpw : 0 < (p : ℝ) ^ w := Real.rpow_pos_of_pos hp0 _
   nlinarith
+
+theorem least_nonresidue (h : HypothesisH) {ε : ℝ} (hε : 0 < ε) :
+    ∃ C : ℝ, 0 < C ∧ ∀ (p : ℕ) [Fact p.Prime] (χ : DirichletCharacter ℂ p), χ ≠ 1 →
+      ∃ n : ℕ, 1 ≤ n ∧ (n : ℝ) ≤ C * (p : ℝ) ^ ε ∧ χ n ≠ 1 :=
+  least_nonresidue_of_zeroFree (zeroFree_of_H h) hε
 
 end LiouvilleEnergyRH

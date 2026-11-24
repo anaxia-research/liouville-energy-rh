@@ -8,15 +8,35 @@ rev = "v4.34.1"
 
 [[lean_lib]]
 name = "OAI"
-roots = ["OAI.NumberTheory.DirichletL.LogarithmicControl"]
+roots = ["OAI.NumberTheory.DirichletL.LogarithmicControl", "OAI.NumberTheory.DirichletL.Nonvanishing",
+  "OAI.NumberTheory.TwoPointCorrelations.FinalMain"]
 globs = ["OAI.+"]
 leanOptions = { autoImplicit = false }
 
 [[lean_lib]]
 name = "PrimeNumberTheoremAnd"
 roots = []
-globs = ["PrimeNumberTheoremAnd.+"]
+globs = ["PrimeNumberTheoremAnd.Mathlib.+", "PrimeNumberTheoremAnd.Wiener", "PrimeNumberTheoremAnd.Sobolev",
+  "PrimeNumberTheoremAnd.Fourier", "PrimeNumberTheoremAnd.SmoothExistence"]
 leanOptions = { autoImplicit = false, relaxedAutoImplicit = false }
+
+# The `Erdos970` files of PrimeNumberTheoremAnd and StrongPNT added by OpenAI's compatibility
+# patches; built with the default options, as in OpenAI's lakefile.
+[[lean_lib]]
+name = "PrimeNumberTheoremAndErdos970"
+roots = []
+globs = ["PrimeNumberTheoremAnd.Erdos970.+"]
+
+[[lean_lib]]
+name = "StrongPNTErdos970"
+roots = []
+globs = ["StrongPNT.Erdos970.+"]
+
+[[lean_lib]]
+name = "RellichKondrachov"
+roots = []
+globs = ["RellichKondrachov.+"]
+leanOptions = { autoImplicit = false }
 
 [[lean_lib]]
 name = "Vinogradov"
@@ -29,3 +49,9 @@ name = "LiouvilleEnergyRH"
 roots = ["LiouvilleEnergyRH"]
 globs = ["LiouvilleEnergyRH", "LiouvilleEnergyRH.+"]
 leanOptions = { autoImplicit = false }
+
+[[lean_lib]]
+name = "ChowlaRH"
+roots = ["ChowlaRH"]
+globs = ["ChowlaRH", "ChowlaRH.+"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false }
