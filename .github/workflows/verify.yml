@@ -1,0 +1,44 @@
+name: Full Lean verification (temporary)
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  readable-rh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build (Lean 4.33.1, Mathlib 0df444a)
+        uses: leanprover/lean-action@v1
+        with:
+          build-args: "ReadableRH"
+      - name: Axiom check
+        run: lake env lean Axioms.lean | tee ci_axioms.txt
+      - name: Compare with the committed axioms.txt
+        run: |
+          if diff -u axioms.txt ci_axioms.txt; then echo "AXIOMS_MATCH"; else echo "AXIOMS_DIFFER"; fi
+          if grep -v -E "\[propext, Classical.choice, Quot.sound\]|\[propext, Quot.sound\]|\[propext\]|does not depend on any axioms" ci_axioms.txt; then echo "NONSTANDARD_AXIOMS_FOUND"; exit 1; else echo "ONLY_STANDARD_AXIOMS"; fi
+
+  corollaries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build every library (Lean 4.34.1, Mathlib v4.34.1)
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: corollaries
+          build-args: "OAI PrimeNumberTheoremAnd PrimeNumberTheoremAndErdos970 StrongPNTErdos970 RellichKondrachov Vinogradov LiouvilleEnergyRH ChowlaRH"
+      - name: Axiom check
+        working-directory: corollaries
+        run: lake env lean Axioms.lean | tee ci_axioms.txt
+      - name: Compare with the committed axioms.txt
+        working-directory: corollaries
+        run: |
+          if diff -u axioms.txt ci_axioms.txt; then echo "AXIOMS_MATCH"; else echo "AXIOMS_DIFFER"; fi
+          if grep -v -E "\[propext, Classical.choice, Quot.sound\]|\[propext, Quot.sound\]|\[propext\]|does not depend on any axioms" ci_axioms.txt; then echo "NONSTANDARD_AXIOMS_FOUND"; exit 1; else echo "ONLY_STANDARD_AXIOMS"; fi
