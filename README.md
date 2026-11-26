@@ -32,6 +32,7 @@ no `sorry` and depends only on the three standard axioms `propext`,
 | RH and GRH from the zero-free half-plane | `ReadableRH.rh_of_H`, `ReadableRH.critLine` | The zero-free half-plane Re s > 1/2 gives RH and GRH, through the functional equation. |
 | RH and GRH from the logarithmic derivative | `ReadableRH.hypothesisH_of_logDeriv`, `ReadableRH.riemannHypothesis_of_logDeriv`, `ReadableRH.grh_of_logDeriv` | If every L'/L(s, χ) is holomorphic on Re s > 1/2, s ≠ 1, then the half-plane, RH and GRH follow. |
 | Zero-free half-planes (quasi-Riemann hypothesis) | `ReadableRH.zeta_ne_zero_of_RH`, `ReadableRH.LFunction_ne_zero_of_H`, `ReadableRH.zeta_ne_zero_of_windowBound` | RH gives ζ(s) ≠ 0 on Re s > θ for every θ ≥ 1/2; the zero-free half-plane Re s > 1/2 gives the same for every Dirichlet L-function; the window bound gives it for ζ. |
+| Primes between consecutive powers | `ReadableRH.exists_prime_between_pow_of_gap` | If every interval [x, x + (22/25)√x log x], x ≥ 4, contains a prime (Carneiro, Milinovich and Soundararajan, under RH; taken as a hypothesis), then (n^m, (n+1)^m) contains a prime for all m ≥ 3, n ≥ 1. |
 | Windowed energy principle | `ReadableRH.windowed_energy_principle` | A family energy bounded by C y^θ on windows [Y, Y^{1+δ}] at arbitrarily large heights makes every member zero-free in Re s > θ. |
 | Host decomposition | `UpperTheory.Comparison₂.core_gm`, `UpperTheory.Comparison₂.sigA_le`, `Deduction.ch_core` | The core energy bound, the bound 4o · x^{1/2+ε} for the discarded characters, and the bound for the kept characters. |
 
@@ -131,6 +132,7 @@ ReadableRH/
   FunctionalEquation.lean
   LogDeriv.lean         log-derivative criterion
   QRH.lean              zero-free half-planes Re s > θ, θ ≥ 1/2
+  Powers.lean           primes between consecutive powers, from the gap bound
   Main.lean             window bound ⇒ RH and GRH
 Axioms.lean             #print axioms for the theorems above
 corollaries/            consequences (Lean 4.34.1); list in corollaries/README.md

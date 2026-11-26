@@ -13,3 +13,6 @@ import ReadableRH
 #print axioms ReadableRH.zeta_ne_zero_of_RH
 #print axioms ReadableRH.LFunction_ne_zero_of_H
 #print axioms ReadableRH.zeta_ne_zero_of_windowBound
+#print axioms ReadableRH.exists_prime_between_pow_of_gap
+#print axioms ReadableRH.pow_add_succ_mul_le
+#print axioms ReadableRH.log_le_two_div_exp_mul_sqrt

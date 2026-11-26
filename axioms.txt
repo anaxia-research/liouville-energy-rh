@@ -12,3 +12,6 @@
 'ReadableRH.zeta_ne_zero_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ReadableRH.LFunction_ne_zero_of_H' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ReadableRH.zeta_ne_zero_of_windowBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.exists_prime_between_pow_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.pow_add_succ_mul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.log_le_two_div_exp_mul_sqrt' depends on axioms: [propext, Classical.choice, Quot.sound]
