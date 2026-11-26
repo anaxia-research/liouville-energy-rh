@@ -10,3 +10,6 @@ import ReadableRH
 #print axioms ReadableRH.hypothesisH_of_logDeriv
 #print axioms ReadableRH.riemannHypothesis_of_logDeriv
 #print axioms ReadableRH.grh_of_logDeriv
+#print axioms ReadableRH.zeta_ne_zero_of_RH
+#print axioms ReadableRH.LFunction_ne_zero_of_H
+#print axioms ReadableRH.zeta_ne_zero_of_windowBound

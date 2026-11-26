@@ -31,6 +31,7 @@ no `sorry` and depends only on the three standard axioms `propext`,
 | Generalized Riemann hypothesis for Dirichlet L-functions | `ReadableRH.grh_of_windowBound` | The window bound puts every zero of a primitive Dirichlet L-function in the critical strip on Re s = 1/2. |
 | RH and GRH from the zero-free half-plane | `ReadableRH.rh_of_H`, `ReadableRH.critLine` | The zero-free half-plane Re s > 1/2 gives RH and GRH, through the functional equation. |
 | RH and GRH from the logarithmic derivative | `ReadableRH.hypothesisH_of_logDeriv`, `ReadableRH.riemannHypothesis_of_logDeriv`, `ReadableRH.grh_of_logDeriv` | If every L'/L(s, χ) is holomorphic on Re s > 1/2, s ≠ 1, then the half-plane, RH and GRH follow. |
+| Zero-free half-planes (quasi-Riemann hypothesis) | `ReadableRH.zeta_ne_zero_of_RH`, `ReadableRH.LFunction_ne_zero_of_H`, `ReadableRH.zeta_ne_zero_of_windowBound` | RH gives ζ(s) ≠ 0 on Re s > θ for every θ ≥ 1/2; the zero-free half-plane Re s > 1/2 gives the same for every Dirichlet L-function; the window bound gives it for ζ. |
 | Windowed energy principle | `ReadableRH.windowed_energy_principle` | A family energy bounded by C y^θ on windows [Y, Y^{1+δ}] at arbitrarily large heights makes every member zero-free in Re s > θ. |
 | Host decomposition | `UpperTheory.Comparison₂.core_gm`, `UpperTheory.Comparison₂.sigA_le`, `Deduction.ch_core` | The core energy bound, the bound 4o · x^{1/2+ε} for the discarded characters, and the bound for the kept characters. |
 
@@ -129,6 +130,7 @@ ReadableRH/
   Host/                 host decomposition
   FunctionalEquation.lean
   LogDeriv.lean         log-derivative criterion
+  QRH.lean              zero-free half-planes Re s > θ, θ ≥ 1/2
   Main.lean             window bound ⇒ RH and GRH
 Axioms.lean             #print axioms for the theorems above
 corollaries/            consequences (Lean 4.34.1); list in corollaries/README.md

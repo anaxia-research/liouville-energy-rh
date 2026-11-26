@@ -9,3 +9,6 @@
 'ReadableRH.hypothesisH_of_logDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ReadableRH.riemannHypothesis_of_logDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ReadableRH.grh_of_logDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.zeta_ne_zero_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.LFunction_ne_zero_of_H' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReadableRH.zeta_ne_zero_of_windowBound' depends on axioms: [propext, Classical.choice, Quot.sound]
