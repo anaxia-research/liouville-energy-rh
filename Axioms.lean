@@ -16,3 +16,7 @@ import ReadableRH
 #print axioms ReadableRH.exists_prime_between_pow_of_gap
 #print axioms ReadableRH.pow_add_succ_mul_le
 #print axioms ReadableRH.log_le_two_div_exp_mul_sqrt
+#print axioms ReadableRH.least_mills_constant
+#print axioms ReadableRH.least_mills_constant_of_gap
+#print axioms ReadableRH.millsConst_le
+#print axioms ReadableRH.floor_millsConst_pow
