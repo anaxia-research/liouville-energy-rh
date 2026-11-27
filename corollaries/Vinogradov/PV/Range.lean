@@ -14,6 +14,9 @@ namespace Vinogradov.PV
 
 open Finset Complex
 
+variable [hZ : Fact Vinogradov.Main.ZeroFree]
+
+include hZ in
 /-- **Integers with a large prime factor.** For `χ` nonprincipal modulo `q` and `2 ≤ Y`,
 `‖∑_{n ≤ t, gpf n > Y} χ(n)‖ ≤ C log (q + 2) t / (Y^{1/20} log Y)`. -/
 theorem nonsmooth_sum :
@@ -216,10 +219,12 @@ theorem psi_log_le (x Y : ℕ) :
   rw [hsplit]
   linarith
 
+include hZ in
 /-- `log log q ≥ log log 3 > 0` for `q ≥ 3`. -/
 theorem log_log_ge {q : ℝ} (hq : 3 ≤ q) : Real.log (Real.log 3) ≤ Real.log (Real.log q) :=
   Real.log_le_log (by linarith [one_lt_log_three]) (Real.log_le_log (by norm_num) hq)
 
+include hZ in
 /-- The parameter `Y = ⌈log q⌉^{40}` and the facts about it used below. -/
 theorem param_facts {q : ℕ} (hq3 : 3 ≤ q) :
     1 < Real.log q ∧ 2 ≤ ⌈Real.log q⌉₊ ∧ Real.log q ≤ ⌈Real.log q⌉₊ ∧
@@ -249,6 +254,7 @@ theorem param_facts {q : ℕ} (hq3 : 3 ≤ q) :
     rw [← h2]
     exact Real.log_le_log (by linarith) (by nlinarith)
 
+include hZ in
 /-- **Smooth numbers and a remainder.** There is an absolute constant `C` such that for every
 nonprincipal character `χ` modulo `q ≥ 3` and every `x`,
 `‖∑_{n ≤ x} χ(n)‖ ≤ Ψ(x, ⌈log q⌉^{40}) + C x / log q`. -/
@@ -295,6 +301,7 @@ theorem character_sum_psi :
         ‖∑ n ∈ Ioc 0 x with Y < gpf n, (χ n : ℂ)‖ := norm_add_le _ _
     _ ≤ _ := add_le_add hsmooth hrough
 
+include hZ in
 /-- **The range of `x` in which `∑_{n ≤ x} χ(n) = o(x)`.** There is an absolute constant `C`
 such that for every nonprincipal character `χ` modulo `q ≥ 3` and every `x ≥ 2`,
 `‖∑_{n ≤ x} χ(n)‖ ≤ C x (log log q / log x + 1 / log q)`. -/
